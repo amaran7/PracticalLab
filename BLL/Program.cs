@@ -37,7 +37,7 @@ namespace PracticalLab
         public void actionResult()
         {
             edgeDetection = new EdgeDetectionLaplacian5x5(this);
-            resultImage = startDetection(originalImage);
+            resultImage = edgeDetection.startDetection(originalImage);
             mainForm.display(resultImage);
         }
 

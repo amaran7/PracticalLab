@@ -10,6 +10,7 @@ namespace PracticalLab.BLL
     public interface IActionManipulation
     {
         void load(String fileName);
+
         void save();
 
         void actionResult();

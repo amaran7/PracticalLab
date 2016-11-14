@@ -30,6 +30,8 @@
         {
             this.btnLoad = new System.Windows.Forms.Button();
             this.picPreview = new System.Windows.Forms.PictureBox();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +53,32 @@
             this.picPreview.TabIndex = 1;
             this.picPreview.TabStop = false;
             // 
+            // btnApply
+            // 
+            this.btnApply.Location = new System.Drawing.Point(253, 632);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(136, 23);
+            this.btnApply.TabIndex = 2;
+            this.btnApply.Text = "Apply Edge Detection";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(571, 632);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save as...";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 667);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnApply);
             this.Controls.Add(this.picPreview);
             this.Controls.Add(this.btnLoad);
             this.Name = "MainForm";
@@ -69,5 +92,7 @@
 
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.PictureBox picPreview;
+        private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Button btnSave;
     }
 }

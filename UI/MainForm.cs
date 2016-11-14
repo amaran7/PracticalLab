@@ -36,6 +36,11 @@ namespace PracticalLab.UI
             }
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            program.actionResult();
+        }
+
         public void display(Bitmap bitmapToDisplay)
         {
             previewBitmap = bitmapToDisplay.CopyToSquareCanvas(picPreview.Width);
@@ -48,7 +53,6 @@ namespace PracticalLab.UI
 
             */
         }
-
 
     }
 }
