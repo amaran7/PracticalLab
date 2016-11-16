@@ -66,7 +66,6 @@ namespace PracticalLab.UI
             if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 program.save(null, sfd.FileName, ImageFormat.Png);
-             
             }
         }
     }

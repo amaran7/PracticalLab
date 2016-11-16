@@ -14,4 +14,3 @@ D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.exe
 D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.pdb
 D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\NSubstitute.dll
 D:\VisualStudioProjects\PracticalLab\PracticalLab\bin\Debug\NSubstitute.xml
-D:\VisualStudioProjects\PracticalLab\PracticalLab\obj\Debug\PracticalLab.csprojResolveAssemblyReference.cache

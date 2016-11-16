@@ -25,10 +25,10 @@ namespace PracticalLab.DLL
             isb.save(image, filename, format);
         }
 
-        public void loadFromDisk(string fileName)
+        public Bitmap loadFromDisk(string fileName)
         {
             ilb = new LoadFromDisk();
-            ilb.loadImage(fileName);
+            return ilb.loadImage(fileName);
         }
     }
 }

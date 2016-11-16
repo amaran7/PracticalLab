@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using PracticalLab.DLL;
 
 namespace PracticalLab
 {
     public class Program : IProgramBehaviour, IEdgeDetection
     {
         private IEdgeDetection edgeDetection;
-        private ISaveBehaviour stf = new SaveToFile();
-        private ILoadBehaviour lfd = new LoadFromDisk();
+        private DLLManager dllManager;
         private Bitmap originalImage, resultImage;
         private MainForm mainForm;
         
@@ -23,18 +23,19 @@ namespace PracticalLab
         {
             mainForm = mf;
             edgeDetection = new EdgeDetectionLaplacian5x5(this);
+            dllManager = new DLLManager(this);
         }
 
         public void load(string fileName)
         {
-            originalImage = lfd.loadImage(fileName);
+            originalImage = dllManager.loadFromDisk(fileName);
             applyResult(originalImage);
         }
 
         public void save(Bitmap image, String filename, ImageFormat imgf)
         {
             if (resultImage != null) {
-                Console.WriteLine("result image != null");
+                
                 string fileExtension = Path.GetExtension(filename).ToUpper();
                 if (fileExtension == ".BMP")
                 {
@@ -44,7 +45,7 @@ namespace PracticalLab
                 {
                     imgf = ImageFormat.Jpeg;
                 }
-                stf.save(resultImage, filename, imgf);
+                dllManager.saveToFile(resultImage, filename, imgf);
             }
         }
 
