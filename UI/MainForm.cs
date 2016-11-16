@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PracticalLab.UI
 {
@@ -38,7 +40,7 @@ namespace PracticalLab.UI
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            program.actionResult();
+            program.startDetection(previewBitmap);
         }
 
         public void display(Bitmap bitmapToDisplay)
@@ -54,5 +56,18 @@ namespace PracticalLab.UI
             */
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = "Specify a file name and file path";
+            sfd.Filter = "PNG Images (*.png)|*.png|JPEG Images (*.jpg)|*.jpg";
+            sfd.Filter += "|BMP Images (*.bmp)|*.bmp";
+
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                program.save(null, sfd.FileName, ImageFormat.Png);
+             
+            }
+        }
     }
 }

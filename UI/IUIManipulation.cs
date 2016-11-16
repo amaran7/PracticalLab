@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.UI
 {
-    interface IUIManipulation
+    public interface IUIManipulation
     {
         void display(Bitmap bitmapToDisplay);
     }

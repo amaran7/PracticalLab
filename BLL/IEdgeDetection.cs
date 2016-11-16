@@ -9,6 +9,9 @@ namespace PracticalLab
 {
     public interface IEdgeDetection
     {
-        Bitmap startDetection(Bitmap img);
+        void startDetection(Bitmap img);
+
+        Bitmap getImage();
+
     }
 }

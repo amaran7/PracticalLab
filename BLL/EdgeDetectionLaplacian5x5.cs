@@ -14,8 +14,8 @@ namespace PracticalLab
         Program program;
         double firstValue;
         int secondValue;
-        bool grayscale; 
-        
+        bool grayscale;
+
 
         public EdgeDetectionLaplacian5x5(Program prog)
         {
@@ -26,10 +26,10 @@ namespace PracticalLab
             setMatrix();
         }
 
-        public Bitmap startDetection(Bitmap img)
+        public override void startDetection(Bitmap img)
         {
             applyEdgeDetectionWithConvolution(img, matrix, firstValue, secondValue, grayscale);
-            return tempImage;
+            
         }
 
 
@@ -42,5 +42,11 @@ namespace PracticalLab
                   { -1, -1, -1, -1, -1, },
                   { -1, -1, -1, -1, -1  }};
         }
+
+        public Bitmap getImage()
+        {
+            return tempImage;
+        }
     }
+
 }

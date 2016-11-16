@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace PracticalLab.BLL
 {
-    public class BaseEdgeDetection : IEdgeDetection
+    public abstract class BaseEdgeDetection : IEdgeDetection
     {
-        protected Bitmap tempImage { get; set; }
+        protected Bitmap tempImage;
         protected double[,] matrix { get; set; }
 
 
@@ -279,9 +279,12 @@ namespace PracticalLab.BLL
             this.tempImage = resultBitmap;
         }
 
-        public Bitmap startDetection(Bitmap img)
+        public Bitmap getImage()
         {
-            throw new NotImplementedException();
+            return tempImage;
         }
+
+        public abstract void startDetection(Bitmap img);
+        
     }
 }

@@ -65,8 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BLL\BaseEdgeDetection.cs" />
-    <Compile Include="BLL\IActionManipulation.cs" />
+    <Compile Include="BLL\IProgramBehaviour.cs" />
     <Compile Include="BLL\MainApp.cs" />
+    <Compile Include="DLL\DLLManager.cs" />
     <Compile Include="UI\ExtBitmap.cs" />
     <Compile Include="UI\IUIManipulation.cs" />
     <Compile Include="UI\MainForm.cs">
